@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFC-Home</title>
+    <link rel="shortcut icon" href="../static/midia/favicon.ico" type="image/x-ico">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Simulação de RFC para instituições de ensino</h1>
+        <nav></nav>
+        </nav>
+    </header>
+    <main>
+        <div class="info" id="main">
+            <h2>Preencha o <em>Formulário</em> para receber a previsão : </h2>
+            <div class="iselect">
+                <form action="/previsoes" id="previsoes" method="post">
+                    <label for="estado-civil" class="perguntas">Estado civil</label>
+                    <select id="estado-civil"
+                    class="questionario" name="estado-civil" required >
+                        <option selected-desable-value="">Selecione</option>
+                        <option value = 1>Solteiro</option>
+                        <option value = 2>Casado/a</option>
+                        <option value = 3>Viúva/o</option>
+                        <option value = 4>Divorciado/a</option>
+                        <option value = 5>União Estável</option>
+                        <option value = 6>Separado Legalmente</option>
+                    </select>
+                    <label for="mdacurso" class="perguntas">Modo de aplicação do curso</label>
+                    <select id="mdacurso"
+                    class="questionario" name="mdacurso" required>
+                        <option selected-desable-value="">Selecione</option>
+                        <option value = 53>Possui diploma de curto ciclo</option>
+                        <option value = 51>Mudou de curso + Instituição</option>
+                        <option value = 57>Mudou de curso + Instituição(Internacional)</option>
+                        <option value = 44>Efetuou curso Tecnólogo</option>
+                        <option value = 43>Mudou de curso</option>
+                        <option value = 42>Transferido</option>
+                        <option value = 39>Acima de 39 anos</option>
+                        <option value = 15>Estudante internacional(Bacharelado)</option>
+                        <option value = 7>Estudante de outros cursos superiores</option>
+                        <option value = 1>(1ªfase)Contingente padrão</option>
+                        <option value = 2>(1ªfase)Contingente especial(Az. Island)</option>
+                        <option value=16>(1ªfase)Contingente especial(Mad. Island)</option>
+                        <option value = 17>(2ªfase)Contingente padrão</option>
+                        <option value = 18>(3ªfase)Contingente padrão</option>
+                        <option value = 26>Outro Plano</option>
+                        <option value = 27>Outra Instituição</option>
+                    </select>
+                    <div class="qbox">
+                        <label for="qualmae" class="perguntas">Qualificação da mãe</label>
+                        <select id="qualmae"
+                        class="questionario" name="qualmae" required >
+                        <option selected-desable-value="">Selecione</option>
+                        <option value = 1>Fundamental II</option>
+                        <option value = 2>Bacharelado</option>
+                        <option value = 3>Educação superior</option>
+                        <option value = 4>Mestrado</option>
+                        <option value = 5>Doutorado</option>
+                        <option value = 6>Frequentou Educação superior</option>
+                        <option value = 9>12 anos de escola</option>
+                        <option value = 10>11 Anos de escola</option>
+                        <option value = 11>1º Ano Fundamental</option>
+                        <option value = 12>Outro</option>
+                        <option value = 14>1ºano ensino médio</option>
+                        <option value = 15>1ºano ensino médio(Incompletos)</option>
+                        <option value= 18>Curso de comércio geral</option>
+                        <option value = 22>Curso técnico Profissionalizante</option>
+                        <option value = 26>7º Ano Fundamental</option>
+                        <option value = 27>2º ciclo de Ensino superior</option>
+                        <option value= 29>9º ano Fundamental</option>
+                        <option value = 30>8º ano Fundamental</option>
+                        <option value = 34>Desconhecido</option>
+                        <option value = 35>Analfabeto</option>
+                        <option value = 36>Alfabetizado não-escolarizado</option>
+                        <option value= 37>5º Ano Fundamental</option>
+                        <option value= 38>8º ano FundamentalII</option>
+                        <option value= 39>Curso técnico</option>
+                        <option value = 40>Educação superior(1ºciclo)</option>
+                        <option value = 42>Tecnólogo</option>
+                        <option value = 43>Mestre(2ºsegundo cyclo)</option>
+                        <option value= 44>Doutorado(3º ciclo)</option>
+                        </select>
+                        <label for="qualpai" class="perguntas">Qualificação da pai</label>
+                        <select id="qualpai"
+                        class="questionario" name="qualpai" required >
+                        <option selected-desable-value="">Selecione</option>
+                        <option value = 1>Fundamental II</option>
+                        <option value = 2>Bacharelado</option>
+                        <option value = 3>Educação superior</option>
+                        <option value = 4>Mestrado</option>
+                        <option value = 5>Doutorado</option>
+                        <option value = 6>Frequentou Educação superior</option>
+                        <option value = 9>12 anos de escola</option>
+                        <option value = 10>11 Anos de escola</option>
+                        <option value = 11>1º Ano Fundamental</option>
+                        <option value = 12>Outro</option>
+                        <option value = 14>1ºano ensino médio</option>
+                        <option value = 15>1ºano ensino médio(Incompletos)</option>
+                        <option value= 18>Curso de comércio geral</option>
+                        <option value = 22>Curso técnico Profissionalizante</option>
+                        <option value = 26>7º Ano Fundamental</option>
+                        <option value = 27>2º ciclo de Ensino superior</option>
+                        <option value= 29>9º ano Fundamental</option>
+                        <option value = 30>8º ano Fundamental</option>
+                        <option value = 34>Desconhecido</option>
+                        <option value = 35>Analfabeto</option>
+                        <option value = 36>Alfabetizado não-escolarizado</option>
+                        <option value= 37>5º Ano Fundamental</option>
+                        <option value= 38>8º ano FundamentalII</option>
+                        <option value= 39>Curso técnico</option>
+                        <option value = 40>Educação superior(1ºciclo)</option>
+                        <option value = 42>Tecnólogo</option>
+                        <option value = 43>Mestre(2ºsegundo cyclo)</option>
+                        <option value= 44>Doutorado(3º ciclo)</option>
+                        </select>
+                    </div>
+                    <div class="qbox">
+                        <label for="Nacionalidade" class="perguntas">Nacionalidade</label>
+                        <select id="Nacionalidade"
+                        class="questionario" name="Nacionalidade" required >
+                            <option selected-desable-value="">Selecione</option>
+                            <option value = 1>Portuguesa</option>
+                            <option value = 2>Alemã</option>
+                            <option value = 6>Espanhol</option>
+                            <option value = 11>Italiana</option>
+                            <option value = 13>Holândesa</option>
+                            <option value = 14>Inglesa</option>
+                            <option value = 17>Lutuanesa</option>
+                            <option value = 21>Angolana</option>
+                            <option value = 22>Cabo Verdiana</option>
+                            <option value = 24>Guineense</option>
+                            <option value = 25>Moçambicana</option>
+                            <option value = 26>Santomense</option>
+                            <option value = 32>Turquesa</option>
+                            <option value = 41>Brazileira</option>
+                            <option value = 62>Romênia</option>
+                            <option value = 100>Moldovana</option>
+                            <option value = 101>Mexicana</option>
+                            <option value = 103>Ucrâniana</option>
+                            <option value = 105>Russa</option>
+                            <option value = 108>Cubana</option>
+                            <option value = 109>colombiana</option>
+                        </select>
+                        <label for="profissaomae" class="perguntas">Profissão da mãe</label>
+                        <select id="profissaomae"
+                        class="questionario" name="profissaomae" required >
+                            <option selected-desable-value="">Selecione</option>
+                            <option value = 0>Estudante</option>
+                            <option value = 1>Representante do poder legislativo executivo</option>
+                            <option value = 2>Especialista em atividades científicas</option>
+                            <option value = 3>Nivel intermediario de profissões tecnicas</option>
+                            <option value = 4>Funcionário admnistrativo</option>
+                            <option value = 5>Serviços de segurança privada</option>
+                            <option value = 6>Trabalho manual de agricultura,agropecuária e piscicultura</option>
+                            <option value = 7>Trabalho manual em industrias</option>
+                            <option value = 8>Instalação de maquinas e operadores</option>
+                            <option value = 9>Trabalhador não qualificado</option>
+                            <option value = 10>Forças armadas</option>
+                            <option value = 90>Outra situação</option>
+                            <option value = 99>Desempregado</option>
+                            <option value= 122>Profissional da saúde</option>
+                            <option value= 123>Professor</option>
+                            <option value = 125>Especialista em tecnologias de informação e comunicação</option>
+                            <option value = 131>Engenharia</option>
+                            <option value = 132>Profissional da saúde de  nivel intermediario</option>
+                            <option value = 134>Nivel intermediario de tecnicos em esportes,lei,cultura e afins</option>
+                            <option value= 141>Trabalhos de escritório e processamento</option>
+                            <option value= 143>Financias,dados e operações de registros</option>
+                            <option value = 144>Especialista em tecnologias de informação e comunicação</option>
+                            <option value = 144>Outras funções administrativas</option>
+                            <option value = 151>Serviços pessoais</option>
+                            <option value = 152>Nivel intermediario de tecnicos em esportes,lei,cultura e afins</option>
+                            <option value= 153>Trabalhos de escritório e processamento</option>
+                            <option value= 171>Financias,dados e operações de registros</option>
+                            <option value = 173>Especialista em tecnologias de informação e comunicação</option>
+                            <option value = 175>Processamento,entrega e produção alimentícia</option>
+                            <option value = 191>Serviços pessoais</option>
+                            <option value = 192>Trabalho não registrado de agronegócio(Pescador,plantação particular,etc)</option>
+                            <option value = 193>Trabalho não registrado em industrias,contruções e serviços manuais</option>
+                            <option value = 194>Culinária</option>
+                        </select>
+                    </div>
+                    <div
+                    class="qbox">
+                        <label for="profissaopai" class="perguntas">Profissão do pai</label>
+                            <select id="profissaopai"
+                            class="questionario" name="profissaopai" required >
+                                <option selected-desable-value="">Selecione</option>
+                                <option value = 0>Estudante</option>
+                                <option value = 1>Representante do poder legislativo executivo</option>
+                                <option value = 2>Especialista em atividades científicas</option>
+                                <option value = 3>Nivel intermediario de profissões tecnicas</option>
+                                <option value = 4>Funcionário admnistrativo</option>
+                                <option value = 5>Serviços de segurança privada</option>
+                                <option value = 6>Trabalho manual de agricultura,agropecuária e piscicultura</option>
+                                <option value = 7>Trabalho manual em industrias</option>
+                                <option value = 8>Instalação de maquinas e operadores</option>
+                                <option value = 9>Trabalhador não qualificado</option>
+                                <option value = 10>Forças armadas</option>
+                                <option value = 90>Outra situação</option>
+                                <option value = 99>Desempregado</option>
+                                <option value= 122>Profissional da saúde</option>
+                                <option value= 123>Professor</option>
+                                <option value = 125>Especialista em tecnologias de informação e comunicação</option>
+                                <option value = 131>Engenharia</option>
+                                <option value = 132>Profissional da saúde de  nivel intermediario</option>
+                                <option value = 134>Nivel intermediario de tecnicos em esportes,lei,cultura e afins</option>
+                                <option value= 141>Trabalhos de escritório e processamento</option>
+                                <option value= 143>Financias,dados e operações de registros</option>
+                                <option value = 144>Especialista em tecnologias de informação e comunicação</option>
+                                <option value = 144>Outras funções administrativas</option>
+                                <option value = 151>Serviços pessoais</option>
+                                <option value = 152>Nivel intermediario de tecnicos em esportes,lei,cultura e afins</option>
+                                <option value= 153>Trabalhos de escritório e processamento</option>
+                                <option value= 171>Financias,dados e operações de registros</option>
+                                <option value = 173>Especialista em tecnologias de informação e comunicação</option>
+                                <option value = 175>Processamento,entrega e produção alimentícia</option>
+                                <option value = 191>Serviços pessoais</option>
+                                <option value = 192>Trabalho não registrado de agronegócio(Pescador,plantação particular,etc)</option>
+                                <option value = 193>Trabalho não registrado em industrias,contruções e serviços manuais</option>
+                                <option value = 194>Culinária</option>
+                            </select>
+                             <label for="curso" class="perguntas">Curso Prestado
+                        </label>
+                        <select id="curso"
+                        class="questionario" name="curso" required >
+                            <option selected-desable-value="">Selecione</option>
+                            <option value = 33>Tecnologias de produção de biocombústiveis</option>
+                            <option value = 171>Animação e design multmídia</option>
+                            <option value = 9238>Serviço social(Dia)</option>
+                            <option value = 8014>Serviço social(Noite)</option>
+                            <option value = 9003>Agronomia</option>
+                            <option value = 9070>Design de comunicação</option>
+                            <option value = 9085>Medicina Veterinária</option>
+                            <option value = 9119>Engenharia de Informática</option>
+                            <option value = 9147>Administração(Dia)</option>
+                            <option value = 9991>Admnistração(Noite)</option>
+                            <option value = 9254>Turísmo</option>
+                            <option value = 9500>Enfermagem</option>
+                            <option value= 9556>Odontologia</option>
+                            <option value= 9670>Controle e Administração de marketing</option>
+                            <option value = 9773>Jornalismom e comunicação</option>
+                            <option value = 9853>Pedagogia</option>
+                        </select>
+                    </div>
+                    <div class="qbox">
+                        <label for="neducacao" class="perguntas">Nível de educação</label>
+                        <select id="neducacao"
+                        class="questionario" name="neducacao" required >
+                            <option selected-desable-value="">Selecione</option>
+                            <option value = 1>Fundamental II</option>
+                            <option value = 2>Bacharelado</option>
+                            <option value = 3>Educação superior</option>
+                            <option value = 4>Mestrado</option>
+                            <option value = 5>Doutorado</option>
+                            <option value = 6>Frequentou Educação superior</option>
+                            <option value = 9>12 anos de escola</option>
+                            <option value = 10>11 Anos de escola</option>
+                            <option value = 12>Outro</option>
+                            <option value = 14>1ºano ensino médio</option>
+                            <option value = 15>1ºano ensino médio(Incompletos)</option>
+                            <option value = 19>2ºano ensino médio</option>
+                            <option value= 38>8º ano FundamentalII</option>
+                            <option value= 39>Curso técnico</option>
+                            <option value = 40>Educação superior(1ºciclo)</option>
+                            <option value = 42>Tecnólogo</option>
+                            <option value = 43>Mestre(2ºsegundo cyclo)</option>
+                        </select>
+                    </div>
+
+                    <div class="qbox">
+                        <label for="OrdemApl" class="perguntas">Ordem da Aplicação do curso</label>
+                        <input type="number" name="OrdemApl" id="OrdemApl" required placeholder="0" class="questionario" max="9" min="0">
+                        <span class ="qboxcolumn" >
+                            <label for="idadedurantecurso" class="perguntas">Idade durante o curso</label>
+                            <input type="number" name="idadedurantecurso" id="idadedurantecurso" required placeholder="0" class="questionario" max="99" min="0">
+                        </span>
+                    </div>
+                    <div class="qbox">
+                            <label for="nivelqual" class="perguntas">Nível de qualificação(0-200)</label>
+                            <input type="number" name="nivelqual" id="nivelqual" required placeholder="0" class="questionario" max="200" min="0">
+                        <span class ="qboxcolumn" >
+                            <label for="taxadeadmissao" class="perguntas">Taxa de admissão(0-200)</label>
+                            <input type="number" name="taxadeadmissao" id="taxadeadmissao" required placeholder="0" class="questionario" max="200" min="0">
+                        </span>
+                    </div>
+                    <div class="qbox">
+                            <label for="creditosprmrsem" class="perguntas">Uni. currículares creditadas no 1º sem.</label>
+                            <input type="number" name="creditosprmrsem" id="creditosprmrsem" required placeholder="0" class="questionario" max="99" min="0">
+                            <span class ="qboxcolumn" >
+                                <label for="nmravaprmrsem" class="perguntas">Núm. avaliações 1ºsem.</label>
+                                <input type="number" name="nmravaprmrsem" id="nmravaprmrsem" required placeholder="0" class="questionario" max="99" min="0">
+                            </span>
+                    </div>
+                    <div class="qbox">
+                            <label for="enrolledprmrsem" class="perguntas">Uni. currículares matrículadas no 1º sem.</label>
+                            <input type="number" name="enrolledprmrsem" id="enrolledprmrsem" required placeholder="0" class="questionario" max="99" min="0">
+                            <span class ="qboxcolumn" >
+                                <label for="nmruniprmrsem" class="perguntas">Uni. aprovadas 1ºsem.</label>
+                                <input type="number" name="nmruniprmrsem" id="nmruniprmrsem" required placeholder="0" class="questionario" max="99" min="0">
+                            </span>
+                    </div>
+                    <div class="qbox">
+                        <label for="notasprmrsem" class="perguntas">Nota média 1ºsem.</label>
+                        <input type="number" name="notasprmrsem" id="notasprmrsem" required placeholder="0" class="questionario" max="20" min="0">
+                        <span class ="qboxcolumn" >
+                            <label for="unisemprmrsem" class="perguntas">Uni.sem avaliação 1ºsem.</label>
+                            <input type="number" name="unisemprmrsem" id="unisemprmrsem" required placeholder="0" class="questionario" max="99" min="0">
+                        </span>
+                </div>
+                <div class="qbox">
+                        <label for="creditossegsem" class="perguntas">Uni. creditadas 2º sem.</label>
+                            <input type="number" name="creditossegsem" id="creditossegsem" required placeholder="0" class="questionario" max="99" min="0">
+                        <span class ="qboxcolumn" >
+                            <span class ="qboxcolumn" >
+                            <label for="unienrolledsegsem" class="perguntas">Uni.matrículas 2ºsem</label>
+                            <input type="number" name="unienrolledsegsem"id="unienrolledsegsem" required placeholder="0" class="questionario"max="99" min="0">
+                       </span>
+                </div>
+                <div class="qbox">
+                    <label for="nmravasegsem" class="perguntas">Num. avaliações 2º sem.</label>
+                        <input type="number" name="nmravasegsem" id="nmravasegsem" required placeholder="0" class="questionario" max="99" min="0">
+                    <span class ="qboxcolumn" >
+                        <span class ="qboxcolumn" >
+                        <label for="uniaprovsegsem" class="perguntas">Uni. aprovadas 2ºsem</label>
+                        <input type="number" name="uniaprovsegsem"id="uniaprovsegsem" required placeholder="0" class="questionario"max="99" min="0">
+                   </span>
+                </div>
+                <div class="qbox">
+                    <label for="notassegsem" class="perguntas">Nota média 2ºsem.</label>
+                    <input type="number" name="notassegsem" id="notassegsem" required placeholder="0" class="questionario" max="20" min="0">
+                    <span class ="qboxcolumn" >
+                        <label for="unisemsegsem" class="perguntas">Uni.sem avaliação 2ºsem.</label>
+                        <input type="number" name="unisemsegsem" id="unisemsegsem" required placeholder="0" class="questionario" max="99" min="0">
+                    </span>
+                </div>
+                <div class="qbox">
+                    <label for="taxadedesaprovacao" class="perguntas">taxa de desaprovação</label>
+                    <input type="number" name="taxadedesaprovacao" id="taxadedesaprovacao" required placeholder="0" class="questionario" max="100" min="0">
+                    <span class ="qboxcolumn" >
+                        <label for="taxadeinflacao" class="perguntas">taxa de inflação</label>
+                        <input type="number" name="taxadeinflacao" id="taxadeinflacao" required placeholder="0" class="questionario" max="100" min="0">
+                    </span>
+                    <span class ="qboxcolumn" >
+                        <label for="gdp" class="perguntas">GDP</label>
+                        <input type="number" name="gdp" id="gdp" required placeholder="0" class="questionario" max="4" min="-4">
+                    </span>
+                </div>
+                    <div class="checkboxes">
+                        <h3>Marque as opções nas quais o aluno se encaixa :</h3>
+                        <span class="checkboxrow">
+                            <label for="checkbox1"  class="perguntas">Disponibilidade de dia </label>
+                            <input type="checkbox" name="checkbox1" id="checkbox1" value=1  class="questionario">
+                            <label for="checkbox2" class="perguntas">Desabrigado </label>
+                                <input type="checkbox" name="checkbox2" id="checkbox2" value=1  class="questionario">
+                            <br>
+                            <label for="checkbox3" class="perguntas">Necessidades especiais</label >
+                            <input type="checkbox" name="checkbox3" id="checkbox3" value=1  class="questionario">
+                        </span>
+                        <span class="checkboxrow">
+                            <label for="checkbox4" class="perguntas">Está em débito com a institiução </label>
+                            <input type="checkbox" name="checkbox4" id="checkbox4" value=1  class="questionario">
+                            <br>
+                            <label for="checkbox5" class="perguntas">Está com a mensalidade em dia </label>
+                                <input type="checkbox" name="checkbox5" id="checkbox5" value=1  class="questionario" placeholder = 0>
+                            <label for="checkbox6" class="perguntas">Bolsista</label>
+                            <input type="checkbox" name="checkbox6" id="checkbox6" value=1  class="questionario">
+                            <label for="checkbox7" class="perguntas">Masculino</label>
+                            <input type="checkbox" name="checkbox7" id="checkbox7" value=1  class="questionario">
+                            <label for="checkbox8" class="perguntas">Estudante Internacional</label>
+                            <input type="checkbox" name="checkbox8" id="checkbox8" value=1  class="questionario">
+                        </span>
+                    </div>
+                    <button type="submit" id="btnprevisoes">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

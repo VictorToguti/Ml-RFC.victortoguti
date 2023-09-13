@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+:root{
+    --cor1 : #6BCDEA;
+    --cor2 : #8FE5FF;
+    --cor3 : #16333b;
+    --cor4 : #9E6329;
+    --cor5 : #ebac6c91;
+    --shadow : 2.5px 3px 7px 1px rgba(70, 64, 64, 0.199);;
+}
+body{
+    background-color: rgb(221, 239, 243);
+}
+#main2{
+    height: 510px;
+    background-color: var(--cor2);
+    padding: 5px;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    margin: 5px;
+}
+.info{
+    background-color: var(--cor2);
+    padding: 5px;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    margin: 5px;
+    width: 300px;
+}
+#neducacao,#qualmae,#qualpai,#profissaomae,#profissaopai,#estado-civil,#mdacurso,#curso{
+    width: 110px;
+}
+.info#main{
+    width: 850px;
+    height: 880px;
+}
+.perguntas{
+    font: bold 1em sans-serif;
+    color: var(--cor3);
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.questionario{
+    border-radius: 5px;
+    box-shadow:2.5px 3px 7px 1px rgba(0, 0, 0, 0.205) ;
+}
+.qbox{
+    margin-top: 8px;
+    width: 700px;
+}
+#nivelqual,#taxadeadmissao, #nmravaprmrsem, #nmruniprmrsem,#notasprmrsem,#unisemprmrsem,#creditossegsem,#unienrolledsegsem,#nmravasegsem,#uniaprovsegsem,#unisemsegsem,#notassegsem,#gdp,#taxadedesaprovacao,#taxadeinflacao,#creditosprmrsem,#enrolledprmrsem,#OrdemApl,#idadedurantecurso{
+    width: 40px;
+}
+#gdp{
+    margin-top: 10px;
+}
+.checkboxes{
+    text-align:left;
+    width: 600px;
+    position: relative;
+}
+h1,h2,h3{
+margin: 0px;
+font-family: sans-serif;
+color: var(--cor3);
+}
+#imagemarvore{
+    position: relative;
+    left: 282px;
+    top: -310px;
+    border-radius: 10px;
+}
+p{
+    font:normal 1.2em sans-serif;
+    color: var(--cor3);
+}
+#randomforest{
+    width: 220px;
+    position: relative;
+    top: 90px;
+    left: 20px;
+}
+header,main,h1{
+    background-color: var(--cor1);
+    border: 2px solid var(--cor1);
+    padding: 5px;
+    margin: 15px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    box-shadow:2.5px 3px 7px 1px rgba(0, 0, 0, 0.37);
+    border-style: ridge;
+    border-color: var(--cor5);
+}
+.iselect{
+    margin: 5px;
+}
+main{
+    margin-top: 0px;
+    height: 900px;
+}
+header > h1{
+    background-color: var(--cor2);
+    font-size: 1.9em;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 600px;
+    margin-left: 135px;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+h3{
+ margin: 15px;
+ margin-top: 10px;
+}
+h2{
+    border-color: var(--cor2);
+    margin-bottom: 15px;
+    text-align: center;
+}
+nav > p {
+    margin-top: 0px;
+    margin-bottom: 0.2px;
+}
+label{
+    width : 200px;
+    display: inline-block;
+}
+#btnprevisoes{
+    border-radius: 5px;
+    font: 1.5em sans-serif;
+    background-color: var(--cor5);
+    position: relative;
+    left: 730px;
+    top: 8px;
+}
+#previsoesh1{
+    font-size: 2em;
+    background-color: var(--cor2);
+    text-align: center;
+    width: 750px;
+    position: relative;
+    left: 50px;
+    top: -10px;
+}
